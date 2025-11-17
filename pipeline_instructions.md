@@ -8,7 +8,7 @@ For instructions regarding the preparation of _Agrobacterium tumefaciens_ cultur
 
 Use the ImageQuant 800 to collect fluorescence images of agroinfiltrated leaves (a setting including the Cy3 and/or IRlong channels is recommended). Note that, if using the “Lettuce_leaves” setting, image collection time is ~3 minutes. 
 
-![ImageQuant homescreen]("./md_files/1_home-screen.svg" "Homescreen for ImageQuant 800 software")
+![ImageQuant software homescreen](./md_files/1_home-screen.svg)
 
 ## Formatting for saving image files
 When saving images, please use the following file naming format:
