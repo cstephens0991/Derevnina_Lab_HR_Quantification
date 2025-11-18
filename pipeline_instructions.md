@@ -74,7 +74,7 @@ If the underside ("abaxial" side) of the leaf has been imaged, these images may 
 
 ## Stage 2: Take HR measurements
 
-<video src="./HR_scoring.mp4" width="320" height="240" controls></video>
+<video src="./md_files/HR_scoring.mp4" width="320" height="240" controls></video>
 
 
 Once all the selected channel files have been grouped into a single folder, the ImageJ macro “2_Get_HR_score.ijm” may be run, to collect quantitative HR data.
