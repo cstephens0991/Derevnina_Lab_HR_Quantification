@@ -76,16 +76,14 @@ If the underside ("abaxial" side) of the leaf has been imaged, these images may 
 
 ## Stage 2: Take HR measurements
 
-[![Watch the video]()](./md_files/HR_scoring.mp4)
-
-_See "md_files/HR_scoring.mp4" for a video illustrating the HR measurement capture process._
-
-[![Watch the video]()](https://github.com/cstephens0991/Derevnina_Lab_HR_Quantification/blob/main/md_files/HR_scoring.mp4)
+[![Watch video overview]()](./md_files/HR_scoring.mp4)
 
 Once all the selected channel files have been grouped into a single folder, the ImageJ macro `2_Get_HR_score.ijm` may be run, to collect quantitative HR data.
 -	Select the folder containing your images to analyse, e.g. “IRlong_files”
 
 ![Select the folder containing channel image files to quantify.](./md_files/11_HR-quant.jpg) 
+
+-   Set the size of the measurement circle. The default diameter is 36 pixels.
 
 -	The first image will be opened and a prompt will ask for the number of infiltration patches in the image (e.g. the leaf in the below image has five infiltration patches). Click “OK” to continue.
 
@@ -145,15 +143,15 @@ Open the file in RStudio. The Source window should display the full script:
 
 ## Stage 4: Generate annotated images
 
-In order to confirm that the treatment metadata added to the dataframes is correct, a series of annotated image files can be generated and checked manually to confirm:
-•	That measurements were taken in the correct positions, within patches.
-•	The treatment metadata associated with those measurements.
-To generate annotated images, open ImageJ / Fiji and run the “Annotate_image.ijm” macro.
--	Select the folder containing the files for annotation.
- 
--	The script should run automatically, opening files, adding the annotations of measurement location (X and Y axes) and treatment data, saving the annotated image file as “…_ann.tif”, closing the image and opening the next image in the folder.
+In order to confirm that the treatment metadata is correctly added to the dataframes, a series of annotated image files can be generated and checked manually. This will confirm:
+- That measurements were taken in the correct positions, within patches.
+- The correct treatment metadata associated with those patch measurements.
+
+To generate annotated images, open ImageJ / Fiji and run the “4_Annotate_image.ijm” macro.
+- Select the folder containing the files for annotation.
+- The script should run automatically, opening files, adding the annotations of measurement location (X and Y axes) and treatment data, saving the annotated image file as “…_ann.tif”, closing the image and opening the next image in the folder.
  
 
-Check through the annotated images, to confirm that the treatment annotations are as expected for each patch.
+Check through the annotated images, to confirm that the treatment annotations and measurement positions are as expected for each patch. If any images are incorrect, it is recommended to delete all associated files except the original channel .tif image. Transfer this .tif image to a separately generated "temp" folder, and repeat stages 2-4. Re-check the new "..._ann.tif" image and, if correct, transfer the filesback to the original .csv and .tif folder.
 
 The annotated dataframes (“…_ann.csv” files) can now be combined and plots of the data generated…

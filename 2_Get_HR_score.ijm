@@ -1,6 +1,9 @@
 // Ask the user for the folder containing images
 sourceFolder = getDirectory("Select folder with images");
 
+// Set oval size
+oval_size = getNumber("Please enter circle size. Default = 36 pixels", 36);
+
 // Get list of image files in the folder
 fileList = getFileList(sourceFolder);
 
@@ -36,7 +39,7 @@ for (f = 0; f < fileList.length; f++) {
             getSelectionCoordinates(xpoints, ypoints);
 
             // Draw the measurement oval
-            makeOval(xpoints[0]-18, ypoints[0]-18, 36, 36);
+            makeOval(xpoints[0]-(oval_size/2), ypoints[0]-(oval_size/2), oval_size, oval_size);
 
             // Measure mean intensity inside the oval
             run("Measure");
